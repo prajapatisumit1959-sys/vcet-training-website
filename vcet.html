@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Training – VCET Training & Placement</title>
+
+    <link rel="icon" href="safemindimage.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Nunito:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --navy: #1b2e4b;
+            --gold: #c8882e;
+            --white: #ffffff;
+            --bg: #f4f7fb;
+            --text: #24334d;
+            --muted: #667a99;
+            --border: #dde6f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+
+        header {
+            background: white;
+            border-bottom: 2px solid var(--border);
+            padding: 10px 30px;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-area img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .logo-text h1 {
+            font-size: 14px;
+            font-family: 'Lora', serif;
+            color: var(--navy);
+        }
+
+        .logo-text p {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            margin-left: 18px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* PAGE BANNER */
+
+        .banner {
+            background: linear-gradient(105deg, var(--navy), #2a4a7a);
+            padding: 60px 20px;
+            color: white;
+        }
+
+        .banner h2 {
+            font-family: 'Lora', serif;
+            font-size: 34px;
+        }
+
+        /* MAIN */
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif;
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: var(--navy);
+        }
+
+        /* STATS */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: var(--navy);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            padding: 25px;
+            text-align: center;
+            color: white;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat:last-child {
+            border: none;
+        }
+
+        .stat i {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .stat h3 {
+            font-size: 28px;
+            color: #f5c96a;
+        }
+
+        .stat p {
+            font-size: 13px;
+            opacity: .7;
+        }
+
+        /* PROGRAM GRID */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 12px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .card i {
+            font-size: 22px;
+            color: var(--gold);
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* HIGHLIGHTS */
+
+        .highlight {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight i {
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: var(--navy);
+            color: white;
+            margin-top: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h4 {
+            color: #f5c96a;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        footer p,
+        footer a {
+            font-size: 13px;
+            opacity: .7;
+            text-decoration: none;
+            color: white;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        footer a:hover {
+            color: #f5c96a;
+        }
+
+        .copy {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            font-size: 12px;
+            opacity: .5;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:900px) {
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+
+            <div class="logo-area">
+                <img src="safemindimage.png" alt="VCET Logo">
+                <div class="logo-text">
+                    <h1>Vidyavardhini's College of Engineering & Technology</h1>
+                    <p>Vasai Road, Maharashtra</p>
+                </div>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="training.html">Training</a>
+                <a href="placement.html">Placement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="banner">
+        <h2>Training Programs</h2>
+    </section>
+
+    <main>
+
+        <section class="stats">
+
+            <div class="stat">
+                <i class="fa-solid fa-users"></i>
+                <h3>1000+</h3>
+                <p>Students Trained</p>
+            </div>
+
+            <div class="stat">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>50+</h3>
+                <p>Training Sessions</p>
+            </div>
+
+            <div class="stat">
+                <i class="fa-solid fa-handshake"></i>
+                <h3>20+</h3>
+                <p>Industry Partners</p>
+            </div>
+
+            <div class="stat">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>15+</h3>
+                <p>Certification Programs</p>
+            </div>
+
+        </section>
+
+        <h2 class="section-title">Our Training Programs</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <i class="fa-solid fa-people-group"></i>
+                <div>
+                    <h3>Soft Skills Development</h3>
+                    <p>Communication skills, group discussion, leadership and teamwork training.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                    <h3>Aptitude Training</h3>
+                    <p>Quantitative aptitude, logical reasoning and verbal ability preparation.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div>
+                    <h3>Technical Workshops</h3>
+                    <p>Workshops on programming, AI, web development and new technologies.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-user-tie"></i>
+                <div>
+                    <h3>Mock Interviews</h3>
+                    <p>Practice interviews with industry experts to improve confidence.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-file"></i>
+                <div>
+                    <h3>Resume Building</h3>
+                    <p>Guidance on preparing professional resumes and LinkedIn profiles.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-award"></i>
+                <div>
+                    <h3>Industry Certifications</h3>
+                    <p>Certifications from Google, AWS, Microsoft and Cisco.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="section-title" style="margin-top:50px;">Training Highlights</h2>
+
+        <div class="highlight"><i class="fa-solid fa-calendar"></i> Year-round training calendar</div>
+        <div class="highlight"><i class="fa-solid fa-chalkboard-user"></i> Industry experienced trainers</div>
+        <div class="highlight"><i class="fa-solid fa-chart-line"></i> Industry based training assessment</div>
+        <div class="highlight"><i class="fa-solid fa-bullseye"></i> Personalized training tracks</div>
+        <div class="highlight"><i class="fa-solid fa-laptop"></i> Online practice platforms</div>
+        <div class="highlight"><i class="fa-solid fa-users"></i> Guest lectures from industry experts</div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-inner">
+
+            <div>
+                <h4>VCET</h4>
+                <p>K.T. Marg, Vasai Road (W)</p>
+                <p>Palghar, Maharashtra 401202</p>
+                <p>📞 0250-2338234</p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#">Admissions</a>
+                <a href="#">Departments</a>
+                <a href="#">Training</a>
+                <a href="#">Placements</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>vcet_inbox@vcet.edu.in</p>
+                <p>+91 7972019446</p>
+            </div>
+
+        </div>
+
+        <div class="copy">
+            © 2025 VCET. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
